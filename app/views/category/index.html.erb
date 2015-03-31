@@ -1,0 +1,14 @@
+<%- model_class = Category -%>
+<div class="page-header">
+  <h1>Category Listing</h1>
+</div>
+
+<table class="table table-striped">
+
+<ul>
+ <% @categories.each do |cat| %>
+  <li><h3><%= cat.name rescue cat["name"] %> </h3></li>
+  <p3> <%= cat.desc rescue cat["desc"] %> </p3>
+<% end %>
+
+</table>
